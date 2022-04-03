@@ -16,7 +16,9 @@ import {
 
 import {
   showField,
-  hideField
+  hideField,
+  showGroup,
+  hideGroup
 } from './utils/visibility'
 
 function setup (options) {
@@ -40,7 +42,9 @@ function setup (options) {
     addRequired,
     removeRequired,
     showField,
-    hideField
+    hideField,
+    showGroup,
+    hideGroup
   }
 }
 
@@ -55,5 +59,7 @@ export {
   addRequired,
   removeRequired,
   showField,
-  hideField
+  hideField,
+  showGroup,
+  hideGroup
 }
