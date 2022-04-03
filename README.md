@@ -76,7 +76,7 @@ UtilsForm.hideField(document.querySelector('[xname=inpfieldId]'))
 
 <br>
 
-## Métodos
+## Funções
 
 ### `showField`
 Exibe um campo de formulário e recoloca sua obrigatoriedade (caso possua)
