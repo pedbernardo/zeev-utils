@@ -116,8 +116,6 @@ const UtilsForm = Utils.setup({
 UtilsForm.hideField(document.querySelector('[xname=inpfieldId]'))
 ```
 
-> Importante perceber que ao utilizar o construtor os métodos não irão suportar o objeto de configuração dos parâmetros, utilizando sempre a configuração do setup.
-
 <br>
 
 ---
