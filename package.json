@@ -6,11 +6,11 @@
   "browser": "dist/zeev-utils.js",
   "description": "JavaScript utility library to interact with Zeev forms",
   "scripts": {
-    "dev": "rollup -c -w",
-    "prebuild": "rimraf dist",
-    "test": "jest --silent",
+    "dev": "npm run test:watch && npm run dev:watch",
+    "dev:watch": "rollup -c -w",
     "test:watch": "jest --watchAll --silent",
     "test:coverage": "jest --coverage --silent",
+    "prebuild": "rimraf dist",
     "build": "rollup -c",
     "lint": "eslint src/**/*.js --max-warnings=0 --fix",
     "prepare": "husky install"
@@ -30,7 +30,7 @@
     "util"
   ],
   "author": "Pedro Bernardo <pedrovbernardo@gmail.com>",
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pedbernardo/zeev-utils/issues"
   },
