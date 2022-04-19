@@ -144,7 +144,7 @@ export function hideGroup (container, options) {
  * @param {String} containerSelector - seletor do elemento que contém o campo de formulário
  * @returns {Object} campo de formulário e informações auxiliares utilizadas internamente
  */
-export function handleField (field, containerSelector) {
+function handleField (field, containerSelector) {
   field = getField(field, { returnArray: true })
 
   if (!field) return {}
@@ -160,7 +160,7 @@ export function handleField (field, containerSelector) {
   }
 }
 
-export function handleFieldGroup (container) {
+function handleFieldGroup (container) {
   if (container instanceof String) {
     container = document.querySelector(container)
   }
