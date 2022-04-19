@@ -20,7 +20,7 @@
   <a href="#como-utilizar">Como Utilizar</a> |
   <a href="#configuração">Configuração</a> |
   <a href="#funções">Funções</a> |
-  <a href="#Roadmap">Rodmap</a>
+  <a href="#Roadmap">Roadmap</a>
 </p>
 
 <br>
