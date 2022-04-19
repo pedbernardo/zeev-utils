@@ -7,7 +7,7 @@
   <p>Zeev Utils</p>
 
   [![CDN](https://data.jsdelivr.com/v1/package/gh/pedbernardo/zeev-utils/badge)](https://www.jsdelivr.com/package/gh/pedbernardo/zeev-utils)
-  [![NPM](https://img.shields.io/node/v/zeev-utils.svg?style=flat)](http://nodejs.org/download/zeev-utils)
+  [![NPM](https://img.shields.io/npm/v/zeev-utils)](https://www.npmjs.com/package/zeev-utils)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 </h1>
 
