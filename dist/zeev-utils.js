@@ -39,12 +39,12 @@
    * @public
    * Busca campos de formulário do Zeev
    * @param {String|HTMLElement|HTMLCollection|jQuery} field - campo de formulário Zeev
-   * @param {Object} options - configurações
+   * @param {Object=} options - configurações
    * @param {Boolean=} options.returnArray - força que o retorno seja um array mesmo quando houver somente 1 campo
    * @returns {HTMLElement|HTMLElement[]} - campo ou array com os campos encontrados
    */
-  function getField (field, options = {}) {
-    const returnArray = options.returnArray || false;
+  function getField (field, { returnArray } = {}) {
+    returnArray = returnArray || false;
 
     if (field.jquery) {
       return returnArray || field.length > 0
@@ -207,10 +207,11 @@
    * @private
    * Encontra um campo de formulário a partir do seu identificador
    * @param {String} fieldId - identificador do campo no Zeev
-   * @param {Boolean=} returnArray - força que o retorno seja um array mesmo quando houver somente 1 campo
+   * @param {Object=} options - configurações
+   * @param {Boolean=} options.returnArray - força que o retorno seja um array mesmo quando houver somente 1 campo
    * @returns {HTMLElement|HTMLElement[]} - campo ou array com os campos encontrados
    */
-  function getFieldById (fieldId, { returnArray }) {
+  function getFieldById (fieldId, { returnArray } = {}) {
     returnArray = returnArray || false;
 
     if (!fieldId) {
@@ -309,6 +310,7 @@
    * @param {Boolean=} options.toggleRequiredClass - habilita a adição de classe auxiliar ao container do campo
    * @param {String=} options.requiredClass - classe auxiliar quando obrigatório
    * @param {String=} options.requiredAttr - atributo auxiliar quando obrigatório
+   * @param {String=} options.container - seletor do elemento que contém o campo de formulário
    * @returns {HTMLElement[]} - campos encontrados
    */
   function addRequired (field, options) {
@@ -343,6 +345,7 @@
    * @param {Boolean=} options.toggleRequiredClass - habilita a adição de classe auxiliar ao container do campo
    * @param {String=} options.requiredClass - classe auxiliar quando obrigatório
    * @param {String=} options.requiredAttr - atributo auxiliar quando obrigatório
+   * @param {String=} options.container - seletor do elemento que contém o campo de formulário
    * @returns {HTMLElement[]} - campos encontrados
    */
   function removeRequired (field, options) {
@@ -544,29 +547,29 @@
   }
 
   function setup (options) {
-    options = {
+    const overriddenOptions = {
       ...config,
       ...options
     };
 
-    const addRequired = field => addRequired(field, options);
-    const removeRequired = field => removeRequired(field, options);
-    const showField = field => showField(field, options);
-    const hideField = field => hideField(field, options);
-
     return {
+      // Field
       getField,
       getFieldContainer,
       getFieldValue,
       clearField,
       onFileChange,
+
+      // Requirement
       isRequired,
-      addRequired,
-      removeRequired,
-      showField,
-      hideField,
-      showGroup,
-      hideGroup
+      addRequired: (field, executionOptions = {}) => addRequired(field, { ...overriddenOptions, ...executionOptions }),
+      removeRequired: (field, executionOptions = {}) => removeRequired(field, { ...overriddenOptions, ...executionOptions }),
+
+      // Visibility
+      showField: (field, executionOptions = {}) => showField(field, { ...overriddenOptions, ...executionOptions }),
+      hideField: (field, executionOptions = {}) => hideField(field, { ...overriddenOptions, ...executionOptions }),
+      showGroup: (field, executionOptions = {}) => showGroup(field, { ...overriddenOptions, ...executionOptions }),
+      hideGroup: (field, executionOptions = {}) => hideGroup(field, { ...overriddenOptions, ...executionOptions })
     }
   }
 
