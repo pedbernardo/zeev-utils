@@ -9,11 +9,11 @@
   [![CDN](https://data.jsdelivr.com/v1/package/gh/pedbernardo/zeev-utils/badge)](https://www.jsdelivr.com/package/gh/pedbernardo/zeev-utils)
   [![NPM](https://img.shields.io/node/v/zeev-utils.svg?style=flat)](http://nodejs.org/download/zeev-utils)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-  <p style="font-size: 16px;">
-  Coleção <em>não-oficial</em> de <strong>funções utilitárias</strong> para interagir facilmente com formulários no <a href="http://zeev.it" target="_blank">Zeev</a>
-  </p>
 </h1>
+
+<p align="center">
+  Coleção <em>não-oficial</em> de <strong>funções utilitárias</strong> para interagir facilmente com formulários no <a href="http://zeev.it" target="_blank">Zeev</a>
+</p>
 
 <p align="center" style="font-weight: bold;">
   <a href="#" target="_blank">Instalação</a> |
