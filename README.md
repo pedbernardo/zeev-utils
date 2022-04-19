@@ -47,9 +47,7 @@ Apenas adicione a script tag ao cabeçalho do processe e consuma as funções at
 ```
 
 <br>
-
----
-
+<br>
 <br>
 
 ## Como Utilizar
@@ -77,9 +75,7 @@ Utils.hideField('meuCampo')
 ```
 
 <br>
-
----
-
+<br>
 <br>
 
 ## Configuração
@@ -117,9 +113,7 @@ UtilsForm.hideField(document.querySelector('[xname=inpfieldId]'))
 ```
 
 <br>
-
----
-
+<br>
 <br>
 
 ## Funções
@@ -314,9 +308,7 @@ Utils.getFieldValue('meuCampoTextoEmMultivalorada') // ['valor linha 1', 'valor 
 ```
 
 <br>
-
----
-
+<br>
 <br>
 
 ## Roadmap
