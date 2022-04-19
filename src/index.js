@@ -1,4 +1,4 @@
-import { config } from './config'
+import { setup } from './setup'
 
 import {
   getField,
@@ -21,43 +21,22 @@ import {
   hideGroup
 } from './utils/visibility'
 
-function setup (options) {
-  options = {
-    ...config,
-    ...options
-  }
-
-  const addRequired = field => addRequired(field, options)
-  const removeRequired = field => removeRequired(field, options)
-  const showField = field => showField(field, options)
-  const hideField = field => hideField(field, options)
-
-  return {
-    getField,
-    getFieldContainer,
-    getFieldValue,
-    clearField,
-    onFileChange,
-    isRequired,
-    addRequired,
-    removeRequired,
-    showField,
-    hideField,
-    showGroup,
-    hideGroup
-  }
-}
-
 export {
   setup,
+
+  // Field
   getField,
   getFieldContainer,
   getFieldValue,
   clearField,
   onFileChange,
+
+  // Requirement
   isRequired,
   addRequired,
   removeRequired,
+
+  // Visibility
   showField,
   hideField,
   showGroup,
