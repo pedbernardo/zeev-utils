@@ -1,10 +1,31 @@
-[![](https://data.jsdelivr.com/v1/package/gh/pedbernardo/zeev-utils/badge)](https://www.jsdelivr.com/package/gh/pedbernardo/zeev-utils)
-[![Node version](https://img.shields.io/node/v/zeev-utils.svg?style=flat)](http://nodejs.org/download/zeev-utils)
-# 📎 Zeev Utils
-Biblioteca utilitária de javascript para interagir com formulários no Zeev
+<h1 align="center">
+  <br>
+  <img
+    src="./img/zeev-utils-badge.png"
+    alt="Zeev Utils Badge - Waving emoji hand inside a glowing purple hexagon"
+  >
+  <p>Zeev Utils</p>
+
+  [![CDN](https://data.jsdelivr.com/v1/package/gh/pedbernardo/zeev-utils/badge)](https://www.jsdelivr.com/package/gh/pedbernardo/zeev-utils)
+  [![NPM](https://img.shields.io/node/v/zeev-utils.svg?style=flat)](http://nodejs.org/download/zeev-utils)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+  <p style="font-size: 16px;">
+  Coleção <em>não-oficial</em> de <strong>funções utilitárias</strong> para interagir facilmente com formulários no <a href="http://zeev.it" target="_blank">Zeev</a>
+  </p>
+</h1>
+
+<p align="center" style="font-weight: bold;">
+  <a href="#" target="_blank">Instalação</a> |
+  <a href="#" target="_blank">Como Utilizar</a> |
+  <a href="#" target="_blank">Configuração</a> |
+  <a href="#" target="_blank">Funções</a>
+</p>
+
+<br>
 
 ## Instalação
-Utilizando package managers
+### Usar via NPM
 
 ```bash
 npm install zeev-utils
@@ -14,7 +35,8 @@ npm install zeev-utils
 yarn add zeev-utils
 ```
 
-Utilizando CDN
+### Usar via CDN
+Apenas adicione a script tag ao cabeçalho do processe e consuma as funções através do _namespace_ Utils.`funcao`
 ```html
 <script src="https://cdn.jsdelivr.net/gh/pedbernardo/orquestra-utils@latest/dist/zeev-utils.js"></script>
 
@@ -23,6 +45,11 @@ Utilizando CDN
 <script src="https://cdn.jsdelivr.net/gh/pedbernardo/orquestra-utils@latest/dist/zeev-utils.min.js"></script>
 ```
 
+<br>
+
+---
+
+<br>
 
 ## Como Utilizar
 
@@ -37,6 +64,22 @@ import { showField, hideField } from 'zeev-utils'
 
 showField('meuCampo')
 ```
+
+### Utilizando via script tag e CDN
+```js
+// todas as funções estarão disponíveis através do namespace `Utils`
+// globalmente, você inclusive pode testar as funções diretamente
+// no console do seu navegador
+
+Utils.showField('meuCampo')
+Utils.hideField('meuCampo')
+```
+
+<br>
+
+---
+
+<br>
 
 ## Configuração
 
@@ -73,6 +116,10 @@ UtilsForm.hideField(document.querySelector('[xname=inpfieldId]'))
 ```
 
 > Importante perceber que ao utilizar o construtor os métodos não irão suportar o objeto de configuração dos parâmetros, utilizando sempre a configuração do setup.
+
+<br>
+
+---
 
 <br>
 
