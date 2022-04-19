@@ -33,6 +33,7 @@ export function isRequired (field) {
  * @param {Boolean=} options.toggleRequiredClass - habilita a adição de classe auxiliar ao container do campo
  * @param {String=} options.requiredClass - classe auxiliar quando obrigatório
  * @param {String=} options.requiredAttr - atributo auxiliar quando obrigatório
+ * @param {String=} options.container - seletor do elemento que contém o campo de formulário
  * @returns {HTMLElement[]} - campos encontrados
  */
 export function addRequired (field, options) {
@@ -67,6 +68,7 @@ export function addRequired (field, options) {
  * @param {Boolean=} options.toggleRequiredClass - habilita a adição de classe auxiliar ao container do campo
  * @param {String=} options.requiredClass - classe auxiliar quando obrigatório
  * @param {String=} options.requiredAttr - atributo auxiliar quando obrigatório
+ * @param {String=} options.container - seletor do elemento que contém o campo de formulário
  * @returns {HTMLElement[]} - campos encontrados
  */
 export function removeRequired (field, options) {
