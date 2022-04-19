@@ -15,12 +15,12 @@ const FIELD_TYPES_VALUE_BASED = [
  * @public
  * Busca campos de formulário do Zeev
  * @param {String|HTMLElement|HTMLCollection|jQuery} field - campo de formulário Zeev
- * @param {Object} options - configurações
+ * @param {Object=} options - configurações
  * @param {Boolean=} options.returnArray - força que o retorno seja um array mesmo quando houver somente 1 campo
  * @returns {HTMLElement|HTMLElement[]} - campo ou array com os campos encontrados
  */
-export function getField (field, options = {}) {
-  const returnArray = options.returnArray || false
+export function getField (field, { returnArray } = {}) {
+  returnArray = returnArray || false
 
   if (field.jquery) {
     return returnArray || field.length > 0
@@ -183,10 +183,11 @@ export function onFileChange (field, callback) {
  * @private
  * Encontra um campo de formulário a partir do seu identificador
  * @param {String} fieldId - identificador do campo no Zeev
- * @param {Boolean=} returnArray - força que o retorno seja um array mesmo quando houver somente 1 campo
+ * @param {Object=} options - configurações
+ * @param {Boolean=} options.returnArray - força que o retorno seja um array mesmo quando houver somente 1 campo
  * @returns {HTMLElement|HTMLElement[]} - campo ou array com os campos encontrados
  */
-function getFieldById (fieldId, { returnArray }) {
+function getFieldById (fieldId, { returnArray } = {}) {
   returnArray = returnArray || false
 
   if (!fieldId) {
