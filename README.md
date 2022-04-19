@@ -15,11 +15,12 @@
   Coleção <em>não-oficial</em> de <strong>funções utilitárias</strong> para interagir facilmente com formulários no <a href="http://zeev.it" target="_blank">Zeev</a>
 </p>
 
-<p align="center" style="font-weight: bold;">
-  <a href="#" target="_blank">Instalação</a> |
-  <a href="#" target="_blank">Como Utilizar</a> |
-  <a href="#" target="_blank">Configuração</a> |
-  <a href="#" target="_blank">Funções</a>
+<p align="center">
+  <a href="#instalação">Instalação</a> |
+  <a href="#como-utilizar">Como Utilizar</a> |
+  <a href="#configuração">Configuração</a> |
+  <a href="#funções">Funções</a> |
+  <a href="#Roadmap">Rodmap</a>
 </p>
 
 <br>
@@ -124,6 +125,26 @@ UtilsForm.hideField(document.querySelector('[xname=inpfieldId]'))
 <br>
 
 ## Funções
+
+<br>
+
+##### Visibility
+  - [showField](#showField)
+  - [hideField](#hideField)
+  - [showGroup](#showGroup)
+  - [hideGroup](#hideGroup)
+##### Requirement
+  - [isRequired](#isRequired)
+  - [addRequired](#addRequired)
+  - [removeRequired](#removeRequired)
+##### Field
+  - [getField](#getField)
+  - [getFieldContainer](#getFieldContainer)
+  - [getFieldValue](#getFieldValue)
+  - [clearField](#clearField)
+  - [onFileChange](#onFileChange)
+
+<br>
 
 ### `showField`
 Exibe um campo de formulário e recoloca sua obrigatoriedade (caso possua)
@@ -293,3 +314,17 @@ Utils.getFieldValue('meuCampoRadio')                // 'valor da opção selecio
 Utils.getFieldValue('meuCampoCheckbox')             // ['opção A selecionada', 'opção B selecionada'] ou []
 Utils.getFieldValue('meuCampoTextoEmMultivalorada') // ['valor linha 1', 'valor linha 2'] ou ['', '']
 ```
+
+<br>
+
+---
+
+<br>
+
+## Roadmap
+
+**Versão 1.0.0**
+- Alterar definição de tipos de JSDocs para TypeScript
+- Finalizar 100% de cobertura de testes para funções públicas
+- Construir documentação utilizando Vitepress (mockups finalizados)
+- Automatizar build com uso de Github Actions
