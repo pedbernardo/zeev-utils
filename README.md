@@ -229,37 +229,6 @@ Utils.removeRequired(document.querySelector('[xname=inpmeuCampoId]'))
 
 <br>
 
-### `clearField`
-Limpa os valores de um campo de formulário
-
-> _Utils.showField( string | HTMLElement | Node)_
-
-**Exemplo de uso**
-```js
-Utils.clearField('meuCampoId')
-Utils.clearField(document.querySelector('[xname=inpmeuCampoId]'))
-```
-
-<br>
-
-### `onFileChange`
-Trigger disparado quando um campo do tipo **Arquivo** é modificado
-
-> _Utils.onFileChange( string | HTMLElement | Node, function [callback] )_
-
-**Callbacks**
-> **Adição de Arquivo** _Callback( string [filepath], HTMLElement [delete button] )_ <br>
-> **Remoção de Arquivo** _Callback( null )_ 
- 
-**Exemplo de uso**
-```js
-Utils.onFileChange('meuCampoId', (filepath, deleteBtn) => {
-  console.log({ filepath, deleteBtn })
-})
-```
-
-<br>
-
 ### `getField`
 Busca campos de formulário do Zeev, podendo ser a partir do seu identificador, com ou sem o prefixo `inp`
 
@@ -305,6 +274,35 @@ Utils.getFieldValue('meuCampoArquivo')              // 'url pública do arquivo'
 Utils.getFieldValue('meuCampoRadio')                // 'valor da opção selecionada'
 Utils.getFieldValue('meuCampoCheckbox')             // ['opção A selecionada', 'opção B selecionada'] ou []
 Utils.getFieldValue('meuCampoTextoEmMultivalorada') // ['valor linha 1', 'valor linha 2'] ou ['', '']
+```
+
+### `clearField`
+Limpa os valores de um campo de formulário
+
+> _Utils.showField( string | HTMLElement | Node)_
+
+**Exemplo de uso**
+```js
+Utils.clearField('meuCampoId')
+Utils.clearField(document.querySelector('[xname=inpmeuCampoId]'))
+```
+
+<br>
+
+### `onFileChange`
+Trigger disparado quando um campo do tipo **Arquivo** é modificado
+
+> _Utils.onFileChange( string | HTMLElement | Node, function [callback] )_
+
+**Callbacks**
+> **Adição de Arquivo** _Callback( string [filepath], HTMLElement [delete button] )_ <br>
+> **Remoção de Arquivo** _Callback( null )_ 
+ 
+**Exemplo de uso**
+```js
+Utils.onFileChange('meuCampoId', (filepath, deleteBtn) => {
+  console.log({ filepath, deleteBtn })
+})
 ```
 
 <br>
