@@ -92,12 +92,7 @@ export function showGroup (container, options) {
 
   if (!group.container || !group.fields) return
 
-  const requiredFields = group.fields.filter(field =>
-    field.hasAttribute(config.requiredAttr)
-  )
-
-  if (requiredFields.length) addRequired(requiredFields, options)
-
+  group.fields.forEach(showField)
   group.container.classList.remove(options.hideClass)
 
   return group.fields
@@ -123,13 +118,8 @@ export function hideGroup (container, options) {
 
   if (!group.container || !group.fields) return
 
-  const requiredFields = group.fields.filter(field =>
-    field.getAttribute('required') === 'S'
-  )
-
-  if (requiredFields.length) addRequired(requiredFields, options)
-
-  container.classList.remove(options.hideClass)
+  group.fields.forEach(hideField)
+  group.container.classList.add(options.hideClass)
 
   return group.fields
 }
@@ -161,7 +151,7 @@ function handleField (field, containerSelector) {
 }
 
 function handleFieldGroup (container) {
-  if (container instanceof String) {
+  if (typeof container2 === 'string') {
     container = document.querySelector(container)
   }
 
