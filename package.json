@@ -1,6 +1,6 @@
 {
   "name": "zeev-utils",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "main": "dist/zeev-utils.esm.js",
   "module": "dist/zeev-utils.esm.js",
   "browser": "dist/zeev-utils.js",
