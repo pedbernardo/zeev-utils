@@ -39,11 +39,11 @@ yarn add zeev-utils
 ### Usar via CDN
 Apenas adicione a script tag ao cabeçalho do processe e consuma as funções através do _namespace_ Utils.`funcao`
 ```html
-<script src="https://cdn.jsdelivr.net/gh/pedbernardo/orquestra-utils@latest/dist/zeev-utils.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/pedbernardo/zeev-utils@latest/dist/zeev-utils.js"></script>
 
 <!-- ou minificado -->
 
-<script src="https://cdn.jsdelivr.net/gh/pedbernardo/orquestra-utils@latest/dist/zeev-utils.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/pedbernardo/zeev-utils@latest/dist/zeev-utils.min.js"></script>
 ```
 
 <br>
