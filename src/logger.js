@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export function log (message, level = 'warn') {
   const logger = logLevels[level] || console.log
 
