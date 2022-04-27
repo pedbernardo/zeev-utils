@@ -12,6 +12,7 @@
     requiredAttr: 'data-was-required'
   };
 
+  /* istanbul ignore file */
   function log (message, level = 'warn') {
     const logger = logLevels[level] || console.log;
 
@@ -461,7 +462,10 @@
 
     if (!group.container || !group.fields) return
 
-    group.fields.forEach(showField);
+    group.fields.forEach(field => {
+      if (isRequired(field)) addRequired(field, { container });
+    });
+
     group.container.classList.remove(options.hideClass);
 
     return group.fields
@@ -487,7 +491,11 @@
 
     if (!group.container || !group.fields) return
 
-    group.fields.forEach(hideField);
+    group.fields.forEach(field => {
+      clearField(field);
+      if (isRequired(field)) removeRequired(field, { container });
+    });
+
     group.container.classList.add(options.hideClass);
 
     return group.fields
@@ -519,8 +527,13 @@
     }
   }
 
+  /**
+   * @private
+   * @param {String|HTMLElement|} container - elemento que contém os campos de formulário
+   * @returns {Object} campos de formulário encontrados e o container
+   */
   function handleFieldGroup (container) {
-    if (typeof container2 === 'string') {
+    if (typeof container === 'string') {
       container = document.querySelector(container);
     }
 
@@ -528,8 +541,8 @@
 
     const fields = [...container.querySelectorAll('[xname]')];
 
-    if (fields.length) {
-      log('Nenhum campo de formulário encontrato no container informado');
+    if (!fields.length) {
+      log('Nenhum campo de formulário encontrado no container informado');
       return {}
     }
 
